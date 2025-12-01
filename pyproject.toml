@@ -4,12 +4,14 @@
 
 [project]
 name = "allofus"
-description = "Template for reproducible research projects in economics"
+description = "Psychosis Subtype Discovery in All Of Us"
 requires-python = ">=3.11"
 dynamic = ["version"]
 keywords = [
-    "Reproducible Research",
-    "Economics",
+    "psychosis",
+    "rwd",
+    "subtype-discovery",
+    "allofus",
 ]
 classifiers = [
     "Intended Audience :: Science/Research",
@@ -21,10 +23,10 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
 ]
 authors = [
-    { name = "JANE DOE", email = "janedoe@example-university.com" },
+    { name = "Anoja Thanabalasingam", email = "thanabalasingamanoja@gmail.com" },
 ]
 maintainers = [
-    { name = "JANE DOE", email = "janedoe@example-university.com" },
+    { name = "Anoja Thanabalasingam", email = "thanabalasingamanoja@gmail.com" },
 ]
 
 [project.readme]

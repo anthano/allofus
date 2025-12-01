@@ -1818,8 +1818,8 @@ packages:
   timestamp: 1704848898483
 - pypi: ./
   name: allofus
-  version: 0.1.dev1+gd3a18c8fd.d20251201
-  sha256: 06f2872ddf1149749ba83c2253698b5588c4320cbac4a49fa204848917141e26
+  version: 0.1.dev2+gbff5abb73.d20251201
+  sha256: 80488e4011171fea3ff159e6a1eda633d69cbe0ccd82044e6e8ff0a6f96a8ad4
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/anyio-4.12.0-pyhcf101f3_0.conda
