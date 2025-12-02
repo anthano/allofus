@@ -36,12 +36,6 @@ content-type = "text/markdown"
 [project.license]
 text = "MIT"
 
-[project.urls]
-Changelog = "https://github.com/OpenSourceEconomics/econ-project-templates"
-Documentation = "https://github.com/OpenSourceEconomics/econ-project-templates"
-Github = "https://github.com/OpenSourceEconomics/econ-project-templates"
-Tracker = "https://github.com/OpenSourceEconomics/econ-project-templates/issues"
-
 # ======================================================================================
 # Build system configuration
 # ======================================================================================
@@ -71,16 +65,16 @@ allow-direct-references = true
 # Pixi configuration
 # ======================================================================================
 
-[tool.pixi.project]
+[tool.pixi.workspace]
 channels = ["conda-forge"]
 platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 
 [tool.pixi.dependencies]
-python = "~=3.12"
+python = "~=3.13.0"
 jupyterlab = "*"
 pre-commit = "*"
 pytask  = ">=0.5.0"
-pytask-latex = ">=0.4.2"
+pytask-latex = ">=0.4.3"
 pytask-parallel = ">=0.5.0"
 pytest = "*"
 pytest-cov = "*"
@@ -88,43 +82,12 @@ pytest-xdist = "*"
 statsmodels = "*"
 numpy = "*"
 pandas = "*"
-plotly = ">=5.2.0,<6"
+plotly = ">=6.1.1"
 
 [tool.pixi.pypi-dependencies]
 allofus = {path = ".", editable = true}
 pdbp = "*"
-
-[tool.pixi.target.unix.pypi-dependencies]
-kaleido = "*"
-
-[tool.pixi.target.win-64.pypi-dependencies]
-kaleido = "==0.1.0.post1"
-
-[tool.pixi.feature.docs.dependencies]
-furo = "*"
-myst-parser = "*"
-nbsphinx = "*"
-pydata-sphinx-theme = ">=0.3.0"
-sphinx = "*"
-sphinx-autoapi = "*"
-sphinx-click = "*"
-sphinx-copybutton = "*"
-sphinx-panels = "*"
-sphinxcontrib-bibtex = "*"
-standard-imghdr = "*"
-
-[tool.pixi.feature.docs.tasks]
-# The 'build-docs' command can be used to build the docs locally or on ReadTheDocs. The
-# env variable READTHEDOCS_OUTPUT is set by ReadTheDocs. If it is not set, the default
-# value is used, which is what we want for local builds.
-build-docs = { cmd = "sphinx-build -T -b html -d $READTHEDOCS_OUTPUT/doctrees -D language=en . $READTHEDOCS_OUTPUT/html", cwd = "docs_template/source" , env = {READTHEDOCS_OUTPUT = "../build"}}
-# The 'check-docs-urls' command is only run locally and on the CI. It checks all URLs in
-# the documentation for validity.
-check-docs-urls = { cmd = "sphinx-build -T -b linkcheck -d ../build/doctrees -D language=en . ../build/linkcheck", cwd = "docs_template/source" }
-
-
-[tool.pixi.environments]
-docs = {features = ["docs"], solve-group = "default"}
+kaleido = ">=1.1"
 
 
 # ======================================================================================
@@ -140,7 +103,7 @@ pdbcls = "pdbp:Pdb"
 # ======================================================================================
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py313"
 fix = true
 
 [tool.ruff.lint]
